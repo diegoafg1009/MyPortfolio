@@ -40,7 +40,7 @@ body{
     }
 
 main{
-    padding: 0 9rem;
+    padding: 0 12.5%;
 }
 
 section{
@@ -58,7 +58,7 @@ section{
 }
 
 .intro__title{
-    font-size: 4.5rem;
+    font-size: clamp(2.25rem, 8vw, 4.5rem);
     padding-bottom: 1.5rem;
 }
 
@@ -89,7 +89,7 @@ section{
 
 .about__image{
     width: 35%;
-    text-align: center;
+    text-align: right;
 }
 
 .about__image img{
@@ -120,6 +120,53 @@ section{
     content: "•";
     padding-right: 1rem;
 }
+
+/* projects styles */
+
+.projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects a{
+    text-decoration: none;
+    color: #000;
+}
+
+.projects__title{
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.projects__item{
+    padding-bottom: 1.5rem;
+}
+
+.projects__item-title{
+    padding-bottom: 0.8rem;
+}
+
+.projects__item-description{
+    padding-bottom: 0.8rem;
+}
+
+.projects__item-skills{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 1.2rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.projects__item-skills li{
+    padding: 0.35rem 0.8rem;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+}
+
+/* footer styles */
 
 .footer{
     text-align: center;
