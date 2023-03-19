@@ -166,6 +166,39 @@ section{
     border-radius: 0.5rem;
 }
 
+/* contact styles */
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact__wrapper{
+    width: 50%;
+    text-align: center;
+}
+
+.contact__title{
+    font-size: clamp(1.85rem, 5vw, 3.25rem);
+    padding-bottom: 1.5rem;
+}
+
+.contact__text{
+    padding-bottom: 3.75rem;
+}
+
+.contact__button{
+    padding: 1rem 1.75rem;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+
 /* footer styles */
 
 .footer{
