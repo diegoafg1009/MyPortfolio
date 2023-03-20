@@ -23,6 +23,22 @@ body{
     background-color: var(--white);
 }
 
+main{
+    padding: 0 12.5%;
+}
+
+section{
+    min-height: 100vh;
+}
+
+/* general media queries */
+
+@media screen and (max-width: 1024px){
+    main{
+        padding: 0 7.5%;
+    }
+}
+
 /* header styles */
 
 .header{
@@ -61,14 +77,6 @@ body{
         color: var(--blue);
         text-decoration: none;
     }
-
-main{
-    padding: 0 12.5%;
-}
-
-section{
-    min-height: 100vh;
-}
 
 /* intro styles */
 
@@ -109,15 +117,16 @@ section{
     align-items: center;
     flex-direction: row;
     width: 100%;
+    gap: 10%;
 }
 
 .about__content{
-    width: 65%;
+    width: 60%;
 }
 
 .about__image{
-    width: 35%;
-    text-align: right;
+    width: 30%;
+    text-align: center;
 }
 
 .about__image img{
@@ -148,6 +157,29 @@ section{
 .about__list li::before{
     content: "•";
     padding-right: 1rem;
+}
+
+/* about media queries */
+
+@media only screen and (max-width: 1024px){
+    .about__wrapper{
+        flex-direction: column;
+    }
+
+    .about__content{
+        width: 100%;
+    }
+
+    .about__image{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .about__image img{
+        width: 15rem;
+        height: 15rem;
+    }
 }
 
 /* projects styles */
@@ -243,6 +275,20 @@ section{
 .contact__button:hover{
     background-color: var(--darker-blue);
     color: var(--white);
+}
+
+/* contact media queries */
+
+@media only screen and (max-width: 1024px){
+    .contact__wrapper{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .contact__wrapper{
+        width: 80%;
+    }
 }
 
 /* footer styles */
