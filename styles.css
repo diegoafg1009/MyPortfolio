@@ -1,3 +1,11 @@
+:root{
+    --white: #F6F1F1;
+    --blured-white: #f6f1f1b5;
+    --blue: #19A7CE;
+    --darker-blue: #146C94;
+}
+
+
 /* general styles */
 
 *{
@@ -6,8 +14,13 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;
+    background-color: var(--white);
 }
 
 /* header styles */
@@ -17,6 +30,16 @@ body{
     height: 3.5rem;
     position: fixed;
     font-weight: 600;
+    transition: all 0.25s ease;
+    transform: translateY(0);
+    background-color: var(--blured-white);
+    box-shadow: 0 10px 30px -10px var(--blured-white);
+    backdrop-filter: blur(10px);
+    color: var(--blue);
+}
+
+.header--hidden{
+    transform: translateY(-100%);
 }
 
     .header__nav{
@@ -35,8 +58,8 @@ body{
 }
 
     .header__nav-list a{
+        color: var(--blue);
         text-decoration: none;
-        color: #000;
     }
 
 main{
@@ -60,10 +83,15 @@ section{
 .intro__title{
     font-size: clamp(2.25rem, 8vw, 4.5rem);
     padding-bottom: 1.5rem;
+    color: var(--blue);
 }
 
 .intro__title-greeting{
     font-size: 1.5rem;
+}
+
+.intro__text{
+    color: black;
 }
 
 /* about styles */
@@ -99,6 +127,7 @@ section{
 }
 
 .about__title{
+    color: var(--blue);
     font-size: 1.5rem;
     padding-bottom: 1.5rem;
 }
@@ -135,6 +164,7 @@ section{
 }
 
 .projects__title{
+    color: var(--blue);
     font-size: 1.5rem;
     padding-bottom: 1.5rem;
 }
@@ -144,7 +174,12 @@ section{
 }
 
 .projects__item-title{
+    color: var(--darker-blue);
     padding-bottom: 0.8rem;
+}
+
+.projects__item i{
+    color: var(--darker-blue)
 }
 
 .projects__item-description{
@@ -162,13 +197,16 @@ section{
 
 .projects__item-skills li{
     padding: 0.35rem 0.8rem;
-    border: 1px solid #000;
+    border: 1px solid var(--darker-blue);
+    color: var(--white);
+    background-color: var(--darker-blue);
     border-radius: 0.5rem;
 }
 
 /* contact styles */
 
 .contact{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,6 +218,7 @@ section{
 }
 
 .contact__title{
+    color: var(--blue);
     font-size: clamp(1.85rem, 5vw, 3.25rem);
     padding-bottom: 1.5rem;
 }
@@ -189,14 +228,21 @@ section{
 }
 
 .contact__button{
-    padding: 1rem 1.75rem;
-    border: 1px solid #000;
+    padding: 1rem 1.45rem;
+    border: 1px solid var(--darker-blue);
     border-radius: 0.5rem;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     text-decoration: none;
-    color: #000;
+    background-color: var(--white);
+    color: var(--darker-blue);
+    transition: .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.contact__button:hover{
+    background-color: var(--darker-blue);
+    color: var(--white);
 }
 
 /* footer styles */
@@ -204,4 +250,6 @@ section{
 .footer{
     text-align: center;
     padding-bottom: 2rem;
+    position: absolute;
+    bottom: 0px;
 }
